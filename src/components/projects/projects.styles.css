@@ -1,0 +1,45 @@
+.projects {
+  width: 100%;
+}
+
+.projects__details {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects__heading {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.projects__continer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+  .projects__details {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projects__details {
+    padding: 1rem;
+  }
+
+  .font_icon {
+    margin-top: 4rem;
+  }
+
+  .projects__continer {
+    flex-direction: column;
+  }
+}

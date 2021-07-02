@@ -1,0 +1,139 @@
+header {
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(51, 84, 109);
+  color: #f7efed;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 10px 10px rgba(51, 84, 109, 0.15);
+}
+
+.header__container {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5rem;
+}
+
+.logo {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo a:hover,
+.logo a:focus {
+  color: #f1485b;
+}
+
+nav {
+  margin-left: auto;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  position: relative;
+  display: block;
+  letter-spacing: 2px;
+}
+
+li + li {
+  margin-left: 2rem;
+}
+
+nav a {
+  padding: 2rem 0;
+  text-decoration: none;
+  color: white;
+  transition: all 150ms ease-in;
+  font-weight: 600;
+}
+
+nav a:active {
+  font-size: 1.2rem;
+}
+
+nav a:focus {
+  color: #f1485b;
+}
+
+nav a:hover,
+nav a:focus {
+  /* border-top: 0.15rem solid lightblue; */
+  color: #f1485b;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #f1485b;
+  position: absolute;
+
+  top: -2rem;
+  width: 0%;
+  transition: all 250ms ease-in;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+nav a:hover::before,
+nav a:focus::before {
+  border-radius: 50px;
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .header__container {
+    padding-inline: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__container {
+    padding-inline: 1rem;
+  }
+
+  nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+
+  nav a:active {
+    font-size: 1rem;
+  }
+
+  nav a::before {
+    top: 0;
+  }
+
+  nav a:focus::before {
+    width: 100%;
+  }
+}
